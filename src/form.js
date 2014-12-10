@@ -27,7 +27,7 @@ angular.module('angularPayments')
     var ret = {};
 
     for(i in possibleKeys){
-        if(possibleKeys.hasOwnProperty(i)){
+        if(possibleKeys.hasOwnProperty(i) && (data[possibleKeys[i]] !== undefined)){
             ret[camelToSnake(possibleKeys[i])] = angular.copy(data[possibleKeys[i]]);
         }
     }
